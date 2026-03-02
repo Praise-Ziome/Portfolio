@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  color: #0F172A;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
+.site-header {
+  background: #5fb3a2;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #0F172A;
+  font-weight: 500;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 0;
+  align-items: center;
+}
+
+.hero img,
+.featured img,
+.about img,
+.contact img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.primary {
+  background: #2563EB;
+  color: white;
+}
+
+.outline {
+  border: 1px solid #2563EB;
+  color: #2563EB;
+}
+
+.link {
+  color: #2563EB;
+  text-decoration: none;
+}
+
+.hero-actions {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.featured {
+  background: #5fb3a2;
+  padding: 4rem 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.projects {
+  padding: 4rem 0;
+}
+
+.projects-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  border: 1px solid #e5e7eb;
+  padding: 1.3rem;
+  border-radius: 12px;
+}
+
+.skills {
+  background: #5fb3a2;
+  padding: 4rem 0;
+}
+
+.skills-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: white;
+  padding: 1.3rem;
+  border-radius: 12px;
+}
+
+.about {
+  padding: 4rem 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.contact {
+  background: #5fb3a2;
+  padding: 4rem 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.site-footer {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.site-footer nav a {
+  margin: 0 0.6rem;
+  text-decoration: none;
+  color: #0F172A;
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
+
+  .hero,
+  .featured-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
