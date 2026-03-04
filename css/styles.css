@@ -25,7 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between; /* space between logo and links */
-  
+  padding: 1rem 0;
   width: 100%;
 }
 
@@ -83,7 +83,7 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  text-align: center;  /* center all text */
+  
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;       /* make card flex container */
   flex-direction: column;
