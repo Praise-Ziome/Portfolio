@@ -1,6 +1,3 @@
-/* ==============================
-   Base Styles
-============================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,14 +15,10 @@ body {
   margin: auto;
 }
 
-/* ==============================
-   Header & Nav
-============================== */
 .site-header {
-  background: #3B82F6; /* updated hero header to blue */
-  color: white;
-  overflow-x: auto; /* horizontal scroll if needed */
+  background: #5fb3a2;
 }
+
 
 .nav {
   display: flex;
@@ -33,10 +26,6 @@ body {
   justify-content: space-between; /* space between logo and links */
   padding: 1rem 0;
   width: 100%;
-}
-
-.nav-logo {
-  /* logo styles if needed */
 }
 
 .nav-links {
@@ -48,52 +37,25 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: white; /* links white for header */
+  color: #0F172A;
   font-weight: 500;
   white-space: nowrap; /* ensures text doesn't break into multiple lines */
 }
 
-/* ==============================
-   Hero
-============================== */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  padding: 4rem 0;
-  align-items: center;
-  background-color: #3B82F6; /* blue */
-  color: white;
+/* Optional: ensure header doesn't shrink links on tiny screens */
+.site-header {
+  overflow-x: auto; /* horizontal scroll if needed */
 }
+ 
 
-.hero img {
-  width: 100%;
-  border-radius: 12px;
-}
+/* Mobile */
+.nav-toggle {
+  display: none; /* hidden on desktop 
 
-.hero-actions {
-  margin-top: 1.2rem;
-  display: flex;
-  gap: 1rem;
-}
+/* ===== Services Section Revised ===== */
 
-.hero .btn.primary {
-  background-color: white;
-  color: #3B82F6;
-}
-
-.hero .btn.outline {
-  border: 1px solid white;
-  color: white;
-}
-
-/* ==============================
-   Sections Alternating Blue/White
-============================== */
 #services {
   padding: 60px 20px;
-  background-color: white;
-  color: #0F172A;
 }
 
 #services h2 {
@@ -120,11 +82,12 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: flex;
+  display: flex;       /* make card flex container */
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: 100%;        /* ensures equal height in grid */
 }
 
 .service-card h3 {
@@ -143,9 +106,53 @@ body {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
-.featured {
-  background-color: #3B82F6; /* blue */
+/* hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 0;
+  align-items: center;
+}
+
+.hero img,
+.featured img,
+.about img,
+.contact img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.primary {
+  background: #2563EB;
   color: white;
+}
+
+.outline {
+  border: 1px solid #2563EB;
+  color: #2563EB;
+}
+
+.link {
+  color: #2563EB;
+  text-decoration: none;
+}
+
+.hero-actions {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.featured {
+  background: #5fb3a2;
   padding: 4rem 0;
 }
 
@@ -156,19 +163,7 @@ body {
   align-items: center;
 }
 
-.featured .btn.primary {
-  background-color: white;
-  color: #3B82F6;
-}
-
-.featured .btn.outline {
-  border-color: white;
-  color: white;
-}
-
 .projects {
-  background-color: white;
-  color: #0F172A;
   padding: 4rem 0;
 }
 
@@ -211,8 +206,7 @@ body {
 }
 
 .skills {
-  background-color: #3B82F6; /* blue */
-  color: white;
+  background: #5fb3a2;
   padding: 4rem 0;
 }
 
@@ -227,12 +221,9 @@ body {
   background: white;
   padding: 1.3rem;
   border-radius: 12px;
-  color: #0F172A;
 }
 
 .about {
-  background-color: white;
-  color: #0F172A;
   padding: 4rem 0;
 }
 
@@ -244,8 +235,7 @@ body {
 }
 
 .contact {
-  background-color: #3B82F6; /* blue */
-  color: white;
+  background: #5fb3a2;
   padding: 4rem 0;
 }
 
@@ -256,19 +246,6 @@ body {
   align-items: center;
 }
 
-.contact .btn.primary {
-  background-color: white;
-  color: #3B82F6;
-}
-
-.contact .btn.outline {
-  border-color: white;
-  color: white;
-}
-
-/* ==============================
-   Footer
-============================== */
 .site-footer {
   padding: 2rem 0;
   text-align: center;
@@ -280,9 +257,8 @@ body {
   color: #0F172A;
 }
 
-/* ==============================
-   Responsive
-============================== */
+/* responsive */
+
 @media (max-width: 900px) {
 
   .hero,
@@ -297,9 +273,8 @@ body {
   }
 
   .nav-links {
-    flex-direction: row; /* keep links in one line */
+    flex-direction: column;
     margin-left: 0;
-    gap: 0.8rem;
-    flex-wrap: nowrap;
+    gap: 0.5rem;
   }
 }
