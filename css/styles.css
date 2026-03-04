@@ -20,8 +20,30 @@ body {
   background: #5fb3a2;
 }
 
+/* ===== Nav Fix ===== */
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
 
-  /* ===== Services Section ===== */
+.nav-logo {
+  /* make sure your logo element has this class */
+}
+
+.nav-links {
+  display: flex;
+  margin-left: auto; /* pushes links to far right */
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0F172A;
+  font-weight: 500;
+}
+
+/* ===== Services Section ===== */
 
 #services {
   padding: 60px 20px;
@@ -72,26 +94,7 @@ body {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-.nav a {
-  margin-left: 1.2rem;
-  text-decoration: none;
-  color: #0F172A;
-  font-weight: 500;
-}
-
+/* hero */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -257,5 +260,9 @@ body {
     grid-template-columns: 1fr;
   }
 
-
-
+  .nav-links {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 0.5rem;
+  }
+}
