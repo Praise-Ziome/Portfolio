@@ -12,6 +12,7 @@ body {
 }
 
 .container {
+
   margin: auto;
 }
 
@@ -19,38 +20,29 @@ body {
   background: #5fb3a2;
 }
 
-
+/* ===== Nav Fix ===== */
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* space between logo and links */
   padding: 1rem 0;
   width: 100%;
 }
 
+.nav-logo {
+  /* make sure your logo element has this class */
+}
+
 .nav-links {
   display: flex;
+  margin-left: auto; /* pushes links to far right */
   gap: 1.2rem;
-  margin-left: auto;
-  flex-wrap: nowrap; /* prevents stacking on small screens */
 }
 
 .nav-links a {
   text-decoration: none;
   color: #0F172A;
   font-weight: 500;
-  white-space: nowrap; /* ensures text doesn't break into multiple lines */
 }
-
-/* Optional: ensure header doesn't shrink links on tiny screens */
-.site-header {
-  overflow-x: auto; /* horizontal scroll if needed */
-}
- 
-
-/* Mobile */
-.nav-toggle {
-  display: none; /* hidden on desktop 
 
 /* ===== Services Section Revised ===== */
 
@@ -82,7 +74,7 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  
+  text-align: center;  /* center all text */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;       /* make card flex container */
   flex-direction: column;
