@@ -43,23 +43,7 @@ body {
   font-weight: 500;
 }
 
-/* ===== Services Section ===== */
-
-#services {
-  padding: 60px 20px;
-}
-
-#services h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#services p {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-}
-
+/* ===== Services Section Revised ===== */
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -73,17 +57,20 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  text-align: left;
+  text-align: center;  /* center all text */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;       /* make card flex container */
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;        /* ensures equal height in grid */
 }
 
 .service-card h3 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-align: center;
 }
 
 .service-card p {
-  text-align: left;
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -93,6 +80,7 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
+
 
 /* hero */
 .hero {
