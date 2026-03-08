@@ -144,7 +144,9 @@ body {
 .featured {
   padding: 4rem 0;
 }
-
+.featured-actions{
+    margin-top: 1.2rem;
+}
 .featured-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
