@@ -12,7 +12,6 @@ body {
 }
 
 .container {
-  width: min(1100px, 92%);
   margin: auto;
 }
 
@@ -162,7 +161,6 @@ body {
 
 .projects {
   background: #5fb3a2;
-  padding: 60px 20px;
 }
 
 .projects-grid {
