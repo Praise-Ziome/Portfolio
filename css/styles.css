@@ -12,6 +12,7 @@ body {
 }
 
 .container {
+  width: min(1100px, 92%);
   margin: auto;
 }
 
@@ -137,15 +138,12 @@ body {
   margin-top: 1.2rem;
   display: flex;
   gap: 1rem;
-  padding: 8px;
 }
 
 .featured {
   padding: 4rem 0;
 }
-.featured-actions{
-    margin-top: 1.2rem;
-}
+
 .featured-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -153,14 +151,9 @@ body {
   align-items: center;
 }
 
-.featured p{
-  padding: 8px;
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-}
-
 .projects {
   background: #5fb3a2;
+  padding: 4rem 0;
 }
 
 .projects-grid {
