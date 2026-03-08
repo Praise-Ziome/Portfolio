@@ -47,6 +47,7 @@ body {
 
 #services {
   padding: 60px 20px;
+  background: #5fb3a2;
 }
 
 #services h2 {
@@ -140,7 +141,6 @@ body {
 }
 
 .featured {
-  background: #5fb3a2;
   padding: 4rem 0;
 }
 
@@ -152,6 +152,7 @@ body {
 }
 
 .projects {
+  background: #5fb3a2;
   padding: 4rem 0;
 }
 
@@ -194,7 +195,6 @@ body {
 }
 
 .skills {
-  background: #5fb3a2;
   padding: 4rem 0;
 }
 
@@ -213,6 +213,7 @@ body {
 
 .about {
   padding: 4rem 0;
+    background: #5fb3a2;
 }
 
 .about-grid {
@@ -223,7 +224,6 @@ body {
 }
 
 .contact {
-  background: #5fb3a2;
   padding: 4rem 0;
 }
 
@@ -237,6 +237,7 @@ body {
 .site-footer {
   padding: 2rem 0;
   text-align: center;
+    background: #5fb3a2;
 }
 
 .site-footer nav a {
