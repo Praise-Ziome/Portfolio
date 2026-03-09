@@ -281,35 +281,29 @@ body {
 }
 
 /* ===== FOOTER ===== */
-
-.site-footer {
-  padding: 2rem 0;
-  text-align: center;
-  background: #5fb3a2;
-}
-
-.site-footer nav a {
-  margin: 0 0.6rem;
-  text-decoration: none;
-  color: #0F172A;
-}
-
-.social-links {
-  margin-top: 1.2rem;
+.footer-content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
-.social-links a {
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-social a {
   font-size: 1.6rem;
   color: #0F172A;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.social-links a:hover {
+.footer-social a:hover {
   color: #2563EB;
   transform: translateY(-3px);
 }
+
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
