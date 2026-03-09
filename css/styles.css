@@ -294,6 +294,22 @@ body {
   color: #0F172A;
 }
 
+.social-links {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  font-size: 1.6rem;
+  color: #0F172A;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #2563EB;
+  transform: translateY(-3px);
+}
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
@@ -326,3 +342,7 @@ body {
   }
 
 }
+
+
+
+
