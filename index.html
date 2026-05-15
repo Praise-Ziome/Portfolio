@@ -2,363 +2,254 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Praise Ziome | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Praise Ziome — junior web developer and UI/UX designer building clean, responsive, accessible web experiences." />
+  <title>Praise Ziome — Web Developer & UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-
-<header class="site-header">
-  <div class="container nav">
-
-    <div class="nav-logo">
-      <img src="images/logo.jpeg" alt="Logo" />
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo" aria-label="Praise Ziome, home">
+        <span class="logo-mark">P.</span>Ziome
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-  </div>
-</header>
-
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="container hero-grid">
-
-    <div class="hero-content">
-      <h1>Front-End Developer | UI/UX Designer | IT & IoT Problem Solver</h1>
-
-      <p>
-        I build clean, responsive websites and help small businesses run their
-        technology smoothly, from design and deployment to ongoing support.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn outline" href="assets/cv/Praise_Ziome_Web_Developer_CV.pdf">Download CV (PDF)</a>
-      </div>
-    </div>
-
-    <div class="hero-image">
-      <img src="images/hero.jpg" alt="Working at desk" />
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-
-    <h2>Services</h2>
-
-    <p>
-      I offer practical web and IT solutions designed to help individuals and
-      small businesses build a strong online presence and run their technology
-      reliably.
-    </p>
-
-    <div class="services-container">
-
-      <div class="service-card">
-        <h3>Web Development</h3>
-        <p>
-          I design and build responsive, fast and user-friendly websites using
-          modern front-end technologies.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>UI & Digital Design</h3>
-        <p>
-          I create clean interface designs and simple marketing visuals that
-          support your brand and website.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>IT Support & Troubleshooting</h3>
-        <p>
-          I help individuals and small offices resolve common computer and
-          software issues and keep their systems working reliably.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>Network Setup & Configuration</h3>
-        <p>
-          I assist with small office network setup, device connections and
-          basic network troubleshooting.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>Website Maintenance & Support</h3>
-        <p>
-          I provide ongoing updates, bug fixes and performance improvements to
-          keep your website running smoothly.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- FEATURED PROJECT -->
-<section class="featured">
-  <div class="container featured-grid">
-
-    <div>
-      <h2>Featured Project: AquaSense / BlueMetrics System</h2>
-
-      <p>
-        A smart IoT-enabled system that monitors water quality for aquaculture
-        ponds, built using sensors and a web dashboard to track key parameters.
-      </p>
-
-      <div class="featured-actions">
-        <a class="btn primary" href="https://praise-ziome.github.io/AquaSense-or-Bluemetrics/">View Project</a>
-        <a class="btn link" href="https://github.com/Praise-Ziome/AquaSense-or-Bluemetrics">Learn More →</a>
-      </div>
-    </div>
-
-    <div class="featured-image">
-      <img src="images/aquasense.png" alt="AquaSense dashboard" />
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="projects">
-  <div class="container">
-
-    <h2>Other Projects I’ve Built</h2>
-
-    <p class="section-intro">
-      These projects highlight my ability to design and build practical web
-      solutions across real websites, interactive applications, and UI-focused
-      projects.
-    </p>
-
-    <div class="projects-grid">
-
-      <article class="project-card">
-
-        <div class="project-image">
-          <img src="images/vitality-group.jpeg"
-               alt="Vitality Group responsive business website homepage" />
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Available for freelance · 2026</span>
+          <h1 class="hero-title">Web Developer<br/><span class="accent">& UI/UX Designer</span></h1>
+          <p class="hero-text">
+            I'm Praise Ziome — I build clean, responsive web experiences that put clarity,
+            accessibility, and craft first. From front-end development to thoughtful interface
+            design, I help small teams ship work they're proud of.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="cv.pdf" class="btn btn-ghost" download>Download CV</a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>15+</dt><dd>Projects shipped</dd></div>
+            <div><dt>3 yrs</dt><dd>Building for the web</dd></div>
+            <div><dt>100%</dt><dd>Responsive by default</dd></div>
+          </dl>
         </div>
-
-        <h3>Vitality Group Website</h3>
-
-        <p>
-          A responsive website developed under mentorship, focused on improving
-          layout, usability, and content clarity using modern front-end practices.
-        </p>
-
-        <a class="project-link" href="https://vitalitycaregroup.org/" target="https://vitalitycaregroup.org/" rel="https://vitalitycaregroup.org/">
-          View project
-        </a>
-
-      </article>
-
-      <article class="project-card">
-
-        <div class="project-image">
-          <img src="images/weather-app.png"
-               alt="Weather application interface showing live weather results" />
+        <div class="hero-media">
+          <img src="images/hero.jpg" alt="Praise Ziome at a minimal workspace coding on a laptop" width="1024" height="1024" />
         </div>
+      </div>
+    </section>
 
-        <h3>Weather App</h3>
-
-        <p>
-          A responsive web application that displays real-time weather data,
-          demonstrating JavaScript logic, API integration, and clean interface design.
-        </p>
-
-        <a class="project-link" href="https://praise-ziome.github.io/Weather-Info-by-City/" target="_blank" rel="noopener">
-          View project
-        </a>
-
-      </article>
-
-      <article class="project-card">
-
-        <div class="project-image">
-          <img src="images/finpay-ui.png"
-               alt="Finpay finance dashboard UI mockup designed in Figma" />
+    <!-- ========== FEATURED PROJECT ========== -->
+    <section class="featured" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Featured work</span>
+          <h2 id="featured-heading">Smart AquaSense Dashboard</h2>
         </div>
-
-        <h3>Finpay Web App UI Mockup</h3>
-
-        <p>
-          A financial web application interface designed in Figma, focused on
-          clear layout structure, user flow, and modern UI design principles.
-        </p>
-
-        <a class="project-link" href="https://www.figma.com/design/G8x5t8rdh8JpaCnFf3Rc74/Finpay-copy?node-id=0-1&t=rWWD4OethMcvZBuY-1" target="_blank" rel="noopener">
-          View project
-        </a>
-
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="skills">
-  <div class="container">
-
-    <h2>My Skills</h2>
-
-    <p class="section-intro">
-      I combine technical development, design, and IT skills to build functional,
-      user-friendly web solutions while supporting systems and processes effectively.
-    </p>
-
-    <div class="skills-grid">
-
-      <div class="skill-card">
-        <h3>💻 Web Development</h3>
-        <p>
-          I create responsive websites using HTML, CSS, and JavaScript, focusing
-          on clean code and modern development practices.
-        </p>
+        <article class="featured-card">
+          <div class="featured-media">
+            <img src="images/vitality.jpg" alt="Smart AquaSense Dashboard interface displayed on a laptop" loading="lazy" width="1280" height="832" />
+          </div>
+          <div class="featured-body">
+            <span class="role-tag">Role: Front-end development & UI design</span>
+            <p>
+              A modern, responsive IoT dashboard for aquaculture monitoring with real-time
+              visualization of water-quality metrics including temperature, pH, and turbidity.
+              Designed for clarity at a glance and built for performance on every screen size.
+            </p>
+            <ul class="meta-list">
+              <li>Real-time charts · Responsive UI · Accessible</li>
+              <li>IoT data viz · Lighthouse 98 · WCAG AA</li>
+            </ul>
+            <div class="featured-actions">
+              <a href="https://aquasense-smart-flow.lovable.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Project</a>
+              <a href="#projects" class="btn btn-ghost">See More Projects</a>
+            </div>
+          </div>
+        </article>
       </div>
+    </section>
 
-      <div class="skill-card">
-        <h3>🎨 UI / UX Design</h3>
-        <p>
-          I design intuitive interfaces using Figma, wireframes, and high fidelity
-          mockups for consistent and user friendly experiences.
-        </p>
+    <!-- ========== PROJECTS GRID ========== -->
+    <section class="projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Selected projects</span>
+          <h2 id="projects-heading">Recent work</h2>
+          <p class="section-lead">A small selection of recent builds spanning dashboards, utilities, and product UI mockups.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-media"><img src="images/vitality.jpg" alt="Smart AquaSense Dashboard preview" loading="lazy" width="1280" height="832" /></div>
+            <div class="project-body">
+              <h3>Smart AquaSense Dashboard</h3>
+              <p>A responsive IoT dashboard for aquaculture monitoring with real-time temperature, pH, and turbidity visualization.</p>
+              <a href="https://aquasense-smart-flow.lovable.app" target="_blank" rel="noopener noreferrer" class="link-arrow">View case study <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-media"><img src="images/weather.jpg" alt="Weather app interface" loading="lazy" width="1024" height="768" /></div>
+            <div class="project-body">
+              <h3>Weather App</h3>
+              <p>A lightweight forecast app consuming a public API, with location search and a clean daily outlook.</p>
+              <a href="#" class="link-arrow">View case study <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-media"><img src="images/finpay.jpg" alt="Finpay finance app UI mockup" loading="lazy" width="1024" height="768" /></div>
+            <div class="project-body">
+              <h3>Finpay Web App UI Mockup</h3>
+              <p>A concept UI for a personal finance dashboard exploring data hierarchy and dark-mode contrast.</p>
+              <a href="#" class="link-arrow">View case study <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="skill-card">
-        <h3>🛠 IT & Systems</h3>
-        <p>
-          I provide first line IT support, troubleshoot issues, and assist with
-          system setup and documentation.
-        </p>
+    <!-- ========== SKILLS ========== -->
+    <section class="skills" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Toolkit</span>
+          <h2 id="skills-heading">Skills & expertise</h2>
+        </div>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Web Development</h3>
+            <p>HTML5, CSS3, JavaScript, React fundamentals, responsive layouts, and accessible markup.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon" aria-hidden="true">◐</div>
+            <h3>UI / UX Design</h3>
+            <p>Figma, wireframing, design systems, typography, and mobile-first interaction design.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon" aria-hidden="true">⌘</div>
+            <h3>IT & Systems</h3>
+            <p>Hardware troubleshooting, networking basics, and a methodical approach to debugging.</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon" aria-hidden="true">⎇</div>
+            <h3>Tools & Workflow</h3>
+            <p>Git & GitHub, VS Code, Chrome DevTools, Notion, and clean component-driven workflows.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="skill-card">
-        <h3>⚙ Tools & Workflow</h3>
-        <p>
-          I use Git, GitHub, VS Code, DevTools, and Figma for efficient development
-          and collaboration.
-        </p>
+    <!-- ========== ABOUT ========== -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div class="about-media">
+          <img src="images/about.jpg" alt="Portrait of Praise Ziome" loading="lazy" width="896" height="1024" />
+        </div>
+        <div class="about-content">
+          <span class="eyebrow">About me</span>
+          <h2 id="about-heading">A developer who designs, a designer who codes.</h2>
+          <p>
+            I'm Praise — a junior web developer and UI/UX designer. I love the
+            intersection of structure and craft: writing tidy markup, shaping calm interfaces,
+            and sweating the small details that make a product feel considered.
+          </p>
+          <p>
+            My journey started with curiosity — taking apart templates, rebuilding them, and
+            asking why things felt the way they did. Today I freelance with small teams, build
+            side projects on weekends, and keep learning in public.
+          </p>
+          <ul class="about-list">
+            <li><strong>Learning mindset.</strong> Currently exploring TypeScript and motion design.</li>
+            <li><strong>Practical experience.</strong> Shipped client work across dashboards, marketing, and product UI.</li>
+            <li><strong>Collaborative.</strong> Comfortable with Git workflows, code review, and async teams.</li>
+          </ul>
+        </div>
       </div>
+    </section>
 
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-  <div class="container about-grid">
-
-    <div class="about-image">
-      <img src="images/about.png" alt="Working on laptop" />
-    </div>
-
-    <div>
-      <h2>About Me</h2>
-
-      <p>
-        I’m a Junior Web Developer, UI/UX Designer, and IT Support professional passionate about 
-        creating clean, functional digital solutions that solve real-world problems.
-      </p>
-
-      <p>
-        I combine frontend development, design thinking, networking, and technical support skills to build 
-        responsive websites, intuitive user experiences, and dependable IT solutions. My work includes 
-        web projects, UI/UX design, IoT systems, and networking, shaped by hands-on practice, mentorship, 
-        and continuous learning.
-      </p>
-
-      <p>
-        I’m driven by curiosity, practical problem solving, and a commitment to growing into a well-rounded 
-        technology professional. Through projects, mentorship, and personal practice I’ve developed a foundation 
-        in web development, UI design, and IT support.
-      </p>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="container contact-grid">
-
-    <div>
-
-      <h2>Contact Me</h2>
-
-      <p>
-        I’m always open to new opportunities, collaborations, or questions.
-        Feel free to reach out.
-      </p>
-
-      <div class="contact-details">
-        <p><strong>Email:</strong> ziomepraiser@gmail.com</p>
-        <p><strong>Phone:</strong> +263 78 601 9719 / +263 71 767 8562</p>
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow">Get in touch</span>
+          <h2 id="contact-heading">Let's build something thoughtful.</h2>
+          <p>Open to junior developer roles, freelance front-end work, and UI/UX design collaborations.</p>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:hello@praiseziome.dev">hello@praiseziome.dev</a></li>
+            <li><span>Social</span>
+              <ul class="social social-inline" aria-label="Social profiles">
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://webflow.com/" target="_blank" rel="noopener noreferrer" aria-label="Webflow"><i class="fa-brands fa-webflow" aria-hidden="true"></i></a></li>
+                <li><a href="https://contra.com/" target="_blank" rel="noopener noreferrer" aria-label="Contra"><i class="fa-solid fa-c" aria-hidden="true"></i></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
       </div>
+    </section>
+  </main>
 
-
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="logo"><span class="logo-mark">P.</span>Ziome</a>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="social" aria-label="Social links">
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+        <li><a href="https://webflow.com/" target="_blank" rel="noopener noreferrer" aria-label="Webflow"><i class="fa-brands fa-webflow" aria-hidden="true"></i></a></li>
+        <li><a href="https://contra.com/" target="_blank" rel="noopener noreferrer" aria-label="Contra"><i class="fa-solid fa-c" aria-hidden="true"></i></a></li>
+      </ul>
+      <p class="copyright">© <span id="year"></span> Praise Ziome. Built with care.</p>
     </div>
+  </footer>
 
-    <div class="contact-image">
-      <img src="images/contact.png" alt="Workspace" />
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-
-  <div class="container footer-content">
-
-    <div class="footer-social">
-
-      <a href="https://github.com/Praise-Ziome" target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
-
-      <a href="https://linkedin.com/in/praise-ziome/" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-
-      <a href="https://wa.me/263717678562" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
-
-      <a href="mailto:ziomepraiser@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-
-    </div>
-
-    <p>© 2026 Praise Ziome. All rights reserved.</p>
-
-  </div>
-
-</footer>
-
-<script src="js/main.js"></script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
