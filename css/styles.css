@@ -368,8 +368,14 @@ section { padding-block: var(--space-section); }
     transform: translateY(-110%);
     transition: transform .3s ease;
     box-shadow: var(--shadow-md);
+    visibility: hidden; /* ADD THIS */
+    pointer-events: none; /* ADD THIS */
   }
-  .nav-menu.is-open { transform: translateY(0); }
+  .nav-menu.is-open { 
+    transform: translateY(0); 
+    visibility: visible; /* ADD THIS */
+    pointer-events: auto; /* ADD THIS */
+}
   .nav-menu a { padding: .875rem .5rem; border-radius: var(--radius-sm); }
   .nav-menu .nav-cta { text-align: center; }
 
