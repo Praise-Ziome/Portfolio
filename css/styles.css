@@ -381,6 +381,7 @@ section { padding-block: var(--space-section); }
 
   .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
   .hero-stats dt { font-size: 1.25rem; }
+   
   .nav-menu .nav-cta {
     padding: .875rem .5rem;  /* match the other nav links */
     border-radius: var(--radius-sm);
