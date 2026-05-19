@@ -1,5 +1,5 @@
 /* ============================================
-   Alex Carter — Portfolio Stylesheet
+   Praise Ziome — Portfolio Stylesheet
    Design tokens + components + responsive grid
    ============================================ */
 
@@ -131,12 +131,25 @@ section { padding-block: var(--space-section); }
   padding: .625rem 1.125rem; border-radius: var(--radius-md);
 }
 .nav-menu .nav-cta:hover { background: var(--color-primary); color: #fff; }
+
+/* Hamburger button */
 .nav-toggle {
-  display: none; flex-direction: column; gap: 5px;
-  width: 40px; height: 40px; align-items: center; justify-content: center;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 40px; height: 40px;
+  align-items: center; justify-content: center;
   border-radius: var(--radius-sm);
+  padding: 0;
 }
-.nav-toggle span { width: 22px; height: 2px; background: var(--color-text); transition: transform .25s ease, opacity .2s ease; }
+.nav-toggle span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .25s ease;
+  transform-origin: center;
+}
 
 /* ---------- Hero ---------- */
 .hero { padding-top: clamp(3rem, 6vw, 5rem); }
@@ -358,22 +371,60 @@ section { padding-block: var(--space-section); }
 
 @media (max-width: 720px) {
   .nav-toggle { display: flex; }
+
   .nav-menu {
-    position: fixed; inset: 72px 0 auto 0;
-    flex-direction: column; align-items: stretch;
+    position: fixed;
+    inset: 72px 0 auto 0;
+    flex-direction: column;
+    align-items: stretch;
     background: var(--color-surface);
-    padding: 1.25rem;
-    gap: .25rem;
+    padding: 0.75rem 1.25rem 1.25rem;
+    gap: 0;
     border-bottom: 1px solid var(--color-border);
     transform: translateY(-110%);
-    transition: transform .3s ease;
+    transition: transform .3s ease, visibility .3s ease;
     box-shadow: var(--shadow-md);
     visibility: hidden;
     pointer-events: none;
   }
-  .nav-menu.is-open { transform: translateY(0); visibility: visible; pointer-events: auto; }
-  .nav-menu a { padding: .875rem .5rem; border-radius: var(--radius-sm); }
-  .nav-menu .nav-cta { text-align: center;   margin-top: 0.4rem; padding: .875rem .5rem; border-radius: var(--radius-sm); background: var(--color-text); }
+
+  .nav-menu.is-open {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* All nav links — consistent padding, no extra gaps */
+  .nav-menu li {
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav-menu li:last-child {
+    border-bottom: none;
+    padding-top: 0.75rem;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 0.875rem 0.25rem;
+    font-size: 1rem;
+    color: var(--color-muted);
+    border-radius: 0;
+  }
+
+  /* Contact button — same line-height as other links, just styled differently */
+  .nav-menu .nav-cta {
+    display: block;
+    padding: 0.875rem;
+    text-align: center;
+    background: var(--color-text);
+    color: #fff;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+  }
+  .nav-menu .nav-cta:hover {
+    background: var(--color-primary);
+    color: #fff;
+  }
 
   .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
   .hero-stats dt { font-size: 1.25rem; }
