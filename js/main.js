@@ -1,6 +1,6 @@
 /* ============================================
    Portfolio interactions
-   - Mobile nav toggle
+   - Mobile nav toggle (with hamburger ↔ X animation)
    - Sticky navbar shadow on scroll
    - Active link close on navigation
    - Footer year
@@ -16,16 +16,65 @@
   // Mobile nav
   var toggle = document.getElementById('navToggle');
   var menu = document.getElementById('navMenu');
+  var spans = toggle ? toggle.querySelectorAll('span') : [];
+
+  function openMenu() {
+    menu.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close menu');
+    // Animate to X
+    if (spans.length === 3) {
+      spans[0].style.transform = 'translateY(7px) rotate(45deg)';
+      spans[1].style.opacity = '0';
+      spans[1].style.transform = 'scaleX(0)';
+      spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+    }
+  }
+
+  function closeMenu() {
+    menu.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    // Animate back to hamburger
+    if (spans.length === 3) {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[1].style.transform = '';
+      spans[2].style.transform = '';
+    }
+  }
+
   if (toggle && menu) {
     toggle.addEventListener('click', function () {
-      var open = menu.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      var isOpen = menu.classList.contains('is-open');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
+
+    // Close menu when a nav link is clicked
     menu.addEventListener('click', function (e) {
       if (e.target.tagName === 'A') {
-        menu.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
+        closeMenu();
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+      if (menu.classList.contains('is-open') &&
+          !menu.contains(e.target) &&
+          !toggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('is-open')) {
+        closeMenu();
+        toggle.focus();
       }
     });
   }
