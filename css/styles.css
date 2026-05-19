@@ -373,7 +373,7 @@ section { padding-block: var(--space-section); }
   }
   .nav-menu.is-open { transform: translateY(0); visibility: visible; pointer-events: auto; }
   .nav-menu a { padding: .875rem .5rem; border-radius: var(--radius-sm); }
-  .nav-menu .nav-cta { text-align: center; padding: .875rem .5rem; border-radius: var(--radius-sm); background: var(--color-text); }
+  .nav-menu .nav-cta { text-align: center;   margin-top: 0.4rem; padding: .875rem .5rem; border-radius: var(--radius-sm); background: var(--color-text); }
 
   .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
   .hero-stats dt { font-size: 1.25rem; }
