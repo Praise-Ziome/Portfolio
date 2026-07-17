@@ -110,3 +110,22 @@
     });
   }
 })();
+
+/* ── THEME TOGGLE ── */
+(function initTheme() {
+  const btn  = document.getElementById('themeToggle');
+  const body = document.body;
+  const KEY  = 'pziome-theme';
+
+  // Restore saved preference, or respect OS setting
+  const saved = localStorage.getItem(KEY);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (saved === 'light' || (!saved && !prefersDark)) {
+    body.classList.add('light');
+  }
+
+  btn.addEventListener('click', () => {
+    body.classList.toggle('light');
+    localStorage.setItem(KEY, body.classList.contains('light') ? 'light' : 'dark');
+  });
+})();
