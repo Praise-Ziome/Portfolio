@@ -150,6 +150,60 @@ section { padding-block: var(--space-section); }
   transition: transform .3s ease, opacity .25s ease;
   transform-origin: center;
 }
+/* Light mode overrides */
+body.light {
+  --bg-base:    #F4F6FB;
+  --bg-surface: #EAEFF8;
+  --bg-raised:  #FFFFFF;
+  --bg-card:    #FFFFFF;
+
+  --text-primary:   #0D1117;
+  --text-secondary: #3D4A60;
+  --text-muted:     #7A8AA0;
+
+  --border:    rgba(0, 0, 0, 0.08);
+  --border-md: rgba(0, 0, 0, 0.14);
+  --border-hi: rgba(0, 0, 0, 0.22);
+}
+
+/* Navbar background in light mode */
+body.light #navbar {
+  background: rgba(244, 246, 251, 0.88);
+}
+body.light #navbar.scrolled {
+  background: rgba(244, 246, 251, 0.98);
+}
+
+/* Form fields in light mode */
+body.light .form-group input,
+body.light .form-group textarea {
+  background: #FFFFFF;
+  color: #0D1117;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border-md);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: border-color .2s, color .2s, background .2s;
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  border-color: var(--border-hi);
+  color: var(--text-primary);
+}
+/* Show sun in dark mode, moon in light mode */
+.icon-moon { display: none; }
+body.light .icon-sun  { display: none; }
+body.light .icon-moon { display: block; }
 
 /* ---------- Hero ---------- */
 .hero { padding-top: clamp(3rem, 6vw, 5rem); }
