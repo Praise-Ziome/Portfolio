@@ -3,259 +3,331 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Praise Ziome — junior web developer and UI/UX designer building clean, responsive, accessible web experiences." />
-  <title>Praise Ziome — Web Developer & UI/UX Designer</title>
+  <title>P. Ziome — Web Developer & UI/UX Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/favicon.png">
 </head>
 <body>
-  <!-- ========== NAVBAR ========== -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="#home" class="logo" aria-label="Praise Ziome, home">
-        <span class="logo-mark">P.</span>Ziome
-      </a>
-      <nav aria-label="Primary">
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact" class="nav-cta">Contact</a></li>
-                  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+
+  <!-- ═══ NAV ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">P. Ziome</a>
+      <ul class="nav-links">
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn-nav">Contact</a>
+	  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
   <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
   <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
 </button>
-        </ul>
-      </nav>
+      <button class="nav-burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#work" class="mob-link">Projects</a>
+      <a href="#skills" class="mob-link">Skills</a>
+      <a href="#about" class="mob-link">About</a>
+      <a href="#contact" class="mob-link">Contact</a>
+    </div>
+  </nav>
 
-  <main>
-    <!-- ========== HERO ========== -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <span class="eyebrow">Available for freelance · 2026</span>
-          <h1 class="hero-title">Web Developer<br/><span class="accent">& UI/UX Designer</span></h1>
-          <p class="hero-text">
-            I'm Praise Ziome — I build clean, responsive web experiences that put clarity,
-            accessibility, and craft first. From front-end development to thoughtful interface
-            design, I help small teams ship work they're proud of.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="assets/Praise R Ziome C.V.pdf" class="btn btn-ghost" download>Download CV</a>
-          </div>
-          <dl class="hero-stats">
-            <div><dt>15+</dt><dd>Projects shipped</dd></div>
-            <div><dt>3 yrs</dt><dd>Building for the web</dd></div>
-            <div><dt>100%</dt><dd>Responsive by default</dd></div>
-          </dl>
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-left reveal">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>Available for freelance · 2026
+      </div>
+      <h1 class="hero-title">
+        Web Developer<br />
+        <em>&amp; UI/UX Designer</em>
+      </h1>
+      <p class="hero-body">
+        I'm Praise Ziome — I build clean, responsive web experiences that put clarity, accessibility, and craft first. From front-end development to thoughtful interface design, I help small teams ship work they're proud of.
+      </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn-primary">View Projects</a>
+        <a href="assets/Praise R Ziome C.V.pdf" class="btn-ghost" download>Download CV</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-val">15+</span>
+          <span class="stat-label">Projects shipped</span>
         </div>
-        <div class="hero-media">
-          <img src="images/hero.jpg" alt="Praise Ziome at a minimal workspace coding on a laptop" width="1024" height="1024" />
+        <div class="stat">
+          <span class="stat-val">3 yrs</span>
+          <span class="stat-label">Building for the web</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val">100%</span>
+          <span class="stat-label">Responsive by default</span>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="hero-right reveal reveal-delay-2">
+      <!-- Replace src with your actual photo -->
+      <div class="hero-img-wrap">
+        <img src="images/hero.jpg" alt="Praise Ziome at work" class="hero-img" />
+      </div>
+    </div>
+  </section>
 
-    <!-- ========== FEATURED PROJECT ========== -->
-    <section class="featured" aria-labelledby="featured-heading">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Featured work</span>
-          <h2 id="featured-heading">Smart AquaSense Dashboard</h2>
-        </div>
-        <article class="featured-card">
-          <div class="featured-media">
-            <img src="images/aquasense.jpeg" alt="Smart AquaSense Dashboard interface displayed on a laptop" loading="lazy" width="1280" height="832" />
+  <!-- ═══ FEATURED PROJECT ═══ -->
+  <section class="featured-section" id="featured">
+    <div class="section-wrap">
+      <div class="section-eyebrow">Featured work</div>
+      <h2 class="section-title">Smart AquaSense Dashboard</h2>
+      <div class="featured-inner reveal">
+        <div class="featured-preview">
+          <!-- Replace src with your AquaSense screenshot -->
+          <img src="images/aquasense.jpeg" alt="AquaSense Dashboard preview" class="featured-img" />
+          <div class="featured-img-placeholder" aria-hidden="true">
+            <span>AquaSense screenshot</span>
           </div>
-          <div class="featured-body">
-            <span class="role-tag">Role: Front-end development & UI design</span>
-            <p>
-              A modern, responsive IoT dashboard for aquaculture monitoring with real-time
-              visualization of water-quality metrics including temperature, pH, and turbidity.
-              Designed for clarity at a glance and built for performance on every screen size.
-            </p>
-            <ul class="meta-list">
-              <li>Real-time charts · Responsive UI · Accessible</li>
-              <li>IoT data viz · Lighthouse 98 · WCAG AA</li>
-            </ul>
-            <div class="featured-actions">
-              <a href="https://aquasense-smart-flow.lovable.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Project</a>
-              <a href="#projects" class="btn btn-ghost">See More Projects</a>
-            </div>
+        </div>
+        <div class="featured-info">
+          <div class="tag-row">
+            <span class="tag">Front-end development</span>
+            <span class="tag">UI design</span>
+          </div>
+          <p class="featured-desc">
+            A modern, responsive IoT dashboard for aquaculture monitoring with real-time visualization of water-quality metrics including temperature, pH, and turbidity. Designed for clarity at a glance and built for performance on every screen size.
+          </p>
+          <ul class="featured-meta">
+            <li>Real-time charts · Responsive UI · Accessible</li>
+            <li>IoT data viz · Lighthouse 98 · WCAG AA</li>
+          </ul>
+          <div class="featured-actions">
+            <a href="https://aquasense-smart-flow.lovable.app" class="btn-primary">View Project</a>
+            <a href="#work" class="btn-link">See More Projects →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RECENT WORK ═══ -->
+  <section class="work-section" id="work">
+    <div class="section-wrap">
+      <div class="section-eyebrow">Selected projects</div>
+      <h2 class="section-title">Recent work</h2>
+      <p class="section-sub">A small selection of recent builds spanning dashboards, utilities, and product UI mockups.</p>
+
+      <div class="work-grid">
+
+        <article class="work-card reveal">
+          <div class="work-img-wrap">
+            <!-- Replace with your Roumark screenshot -->
+            <img src="images/roumark.png" alt="Roumark Construction Website" class="work-img" />
+            <div class="work-img-placeholder"><span>Roumark screenshot</span></div>
+          </div>
+          <div class="work-card-body">
+            <h3 class="work-card-title">Roumark Construction Website</h3>
+            <p class="work-card-desc">A modern website concept designed to improve trust, clarity, and lead generation for a construction business.</p>
+            <a href="#" class="btn-link">View case study →</a>
           </div>
         </article>
-      </div>
-    </section>
 
-    <!-- ========== PROJECTS GRID ========== -->
-    <section class="projects" id="projects" aria-labelledby="projects-heading">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Selected projects</span>
-          <h2 id="projects-heading">Recent work</h2>
-          <p class="section-lead">A small selection of recent builds spanning dashboards, utilities, and product UI mockups.</p>
+        <article class="work-card reveal reveal-delay-1">
+          <div class="work-img-wrap">
+            <!-- Replace with your Kariba Outboard screenshot -->
+            <img src="images/outboard.png" alt="Kariba Outboard Tech Website" class="work-img" />
+            <div class="work-img-placeholder dark"><span>Kariba Outboard screenshot</span></div>
+          </div>
+          <div class="work-card-body">
+            <h3 class="work-card-title">Kariba Outboard Tech Website</h3>
+            <p class="work-card-desc">A modern website concept designed to showcase marine engine services and build trust with boat owners, lodges, and marine operators on Lake Kariba.</p>
+            <a href="https://praise-ziome.github.io/kariba-outboard-tech/" class="btn-link">View case study →</a>
+          </div>
+        </article>
+
+        <article class="work-card reveal reveal-delay-2">
+          <div class="work-img-wrap">
+            <!-- Replace with your View Lodge screenshot -->
+            <img src="images/viewlodge.png" alt="View Lodge Website" class="work-img" />
+            <div class="work-img-placeholder light"><span>View Lodge screenshot</span></div>
+          </div>
+          <div class="work-card-body">
+            <h3 class="work-card-title">View Lodge Website</h3>
+            <p class="work-card-desc">A modern luxury lodge website concept featuring elegant hospitality UI, scenic visuals, and a clean booking-focused experience.</p>
+            <a href="https://view-lodge.ziomepraiser.workers.dev/" class="btn-link">View case study →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section class="skills-section" id="skills">
+    <div class="section-wrap">
+      <div class="section-eyebrow">Toolkit</div>
+      <h2 class="section-title">Skills &amp; expertise</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="skill-title">Web Development</h3>
+          <p class="skill-desc">HTML5, CSS3, JavaScript, React fundamentals, responsive layouts, and accessible markup.</p>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-media"><img src="images/roumark.png" alt="Roumark Website Preview" loading="lazy" width="1280" height="832" /></div>
-            <div class="project-body">
-              <h3>Roumark Construction Website</h3>
-              <p>A modern website concept designed to improve trust, clarity, and lead generation for a construction business.</p>
-              <a href="https://roumark.ziomepraiser.workers.dev/" target="_blank" rel="noopener noreferrer" class="link-arrow">View case study <span aria-hidden="true">→</span></a>
+
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 class="skill-title">UI / UX Design</h3>
+          <p class="skill-desc">Figma, wireframing, design systems, typography, and mobile-first interaction design.</p>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-2">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3 class="skill-title">IT &amp; Systems</h3>
+          <p class="skill-desc">Hardware troubleshooting, networking basics, and a methodical approach to debugging.</p>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-3">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h3 class="skill-title">Tools &amp; Workflow</h3>
+          <p class="skill-desc">Git &amp; GitHub, VS Code, Chrome DevTools, Notion, and clean component-driven workflows.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="about-section" id="about">
+    <div class="section-wrap about-inner reveal">
+      <div class="about-img-wrap">
+        <!-- Replace with your about photo -->
+        <img src="images/about.png" alt="Praise Ziome coding" class="about-img" />
+        <div class="about-img-placeholder"><span>About photo</span></div>
+      </div>
+      <div class="about-content">
+        <div class="section-eyebrow">About me</div>
+        <h2 class="about-title">A developer who designs,<br />a designer who codes.</h2>
+        <p class="about-body">
+          I'm Praise — a junior web developer and UI/UX designer. I love the intersection of structure and craft: writing tidy markup, shaping calm interfaces, and sweating the small details that make a product feel considered.
+        </p>
+        <p class="about-body">
+          My journey started with curiosity — taking apart templates, rebuilding them, and asking why things felt the way they did. Today I freelance with small teams, build side projects on weekends, and keep learning in public.
+        </p>
+        <ul class="about-list">
+          <li>
+            <span class="list-label">Learning mindset.</span>
+            Currently exploring TypeScript and motion design.
+          </li>
+          <li>
+            <span class="list-label">Practical experience.</span>
+            Shipped client work across dashboards, marketing, and product UI.
+          </li>
+          <li>
+            <span class="list-label">Collaborative.</span>
+            Comfortable with Git workflows, code review, and async teams.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="contact-section" id="contact">
+    <div class="section-wrap contact-inner reveal">
+      <div class="contact-left">
+        <div class="section-eyebrow">Get in touch</div>
+        <h2 class="contact-title">Let's build something<br />thoughtful.</h2>
+        <p class="contact-sub">Open to junior developer roles, freelance front-end and UI/UX design collaborations.</p>
+        <div class="contact-meta">
+          <div class="contact-meta-row">
+            <span class="meta-label">Email</span>
+            <a href="mailto:ziomepraiser@gmail.com" class="meta-val">ziomepraiser@gmail.com</a>
+          </div>
+          <div class="contact-meta-row">
+            <span class="meta-label">Social</span>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/praise-ziome" class="social-link" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://github.com/Praise-Ziome" class="social-link" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a href="https://x.com/pman_zw" class="social-link" aria-label="Twitter / X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://contra.com/praise_ziome_g1o2f5kw/work" class="social-link" aria-label="Contra">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+              </a>
             </div>
-          </article>
-          <article class="project-card">
-            <div class="project-media"><img src="images/outboard.png" alt="Outboard Tech Hero" loading="lazy" width="1024" height="768" /></div>
-            <div class="project-body">
-              <h3>Kariba Outboard Tech Website</h3>
-              <p>A modern website concept designed to showcase marine engine services and build trust with boat owners, lodges, and marine operators on Lake Kariba.</p>
-              <a href="https://praise-ziome.github.io/kariba-outboard-tech/" target="_blank" rel="noopener noreferrer" class="link-arrow">View case study <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-media"><img src="images/viewlodge.png" alt="View Lodge Hero" loading="lazy" width="1024" height="768" /></div>
-            <div class="project-body">
-              <h3>View Lodge Website</h3>
-              <p>A modern luxury lodge website concept featuring elegant hospitality UI, scenic visuals, and a clean booking-focused experience.</p>
-              <a href="https://view-lodge.ziomepraiser.workers.dev/" target="_blank" rel="noopener noreferrer" class="link-arrow">View case study <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- ========== SKILLS ========== -->
-    <section class="skills" id="skills" aria-labelledby="skills-heading">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Toolkit</span>
-          <h2 id="skills-heading">Skills & expertise</h2>
-        </div>
-        <div class="skill-grid">
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
-            <h3>Web Development</h3>
-            <p>HTML5, CSS3, JavaScript, React fundamentals, responsive layouts, and accessible markup.</p>
-          </article>
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">◐</div>
-            <h3>UI / UX Design</h3>
-            <p>Figma, wireframing, design systems, typography, and mobile-first interaction design.</p>
-          </article>
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">⌘</div>
-            <h3>IT & Systems</h3>
-            <p>Hardware troubleshooting, networking basics, and a methodical approach to debugging.</p>
-          </article>
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">⎇</div>
-            <h3>Tools & Workflow</h3>
-            <p>Git & GitHub, VS Code, Chrome DevTools, Notion, and clean component-driven workflows.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== ABOUT ========== -->
-    <section class="about" id="about" aria-labelledby="about-heading">
-      <div class="container about-grid">
-        <div class="about-media">
-          <img src="images/about.png" alt="Portrait of Praise Ziome" loading="lazy" width="896" height="1024" />
-        </div>
-        <div class="about-content">
-          <span class="eyebrow">About me</span>
-          <h2 id="about-heading">A developer who designs, a designer who codes.</h2>
-          <p>
-            I'm Praise — a junior web developer and UI/UX designer. I love the
-            intersection of structure and craft: writing tidy markup, shaping calm interfaces,
-            and sweating the small details that make a product feel considered.
-          </p>
-          <p>
-            My journey started with curiosity — taking apart templates, rebuilding them, and
-            asking why things felt the way they did. Today I freelance with small teams, build
-            side projects on weekends, and keep learning in public.
-          </p>
-          <ul class="about-list">
-            <li><strong>Learning mindset.</strong> Currently exploring TypeScript and motion design.</li>
-            <li><strong>Practical experience.</strong> Shipped client work across dashboards, marketing, and product UI.</li>
-            <li><strong>Collaborative.</strong> Comfortable with Git workflows, code review, and async teams.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CONTACT ========== -->
-    <section class="contact" id="contact" aria-labelledby="contact-heading">
-      <div class="container contact-grid">
-        <div>
-          <span class="eyebrow">Get in touch</span>
-          <h2 id="contact-heading">Let's build something thoughtful.</h2>
-          <p>Open to junior developer roles, freelance front-end work, and UI/UX design collaborations.</p>
-          <ul class="contact-list">
-            <li><span>Email</span><a href="mailto:ziomepraiser@gmail.com">ziomepraiser@gmail.com</a></li>
-            <li><span>Social</span>
-              <ul class="social social-inline" aria-label="Social profiles">
-                <li><a href="https://www.linkedin.com/in/praise-ziome" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
-                <li><a href="https://github.com/Praise-Ziome" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
-                <li><a href="https://webflow.com/dashboard?workspace=praises-workspace-22e867" target="_blank" rel="noopener noreferrer" aria-label="Webflow"><i class="fa-brands fa-webflow" aria-hidden="true"></i></a></li>
-                <li><a href="https://contra.com/praise_ziome_g1o2f5kw/work?r=praise_ziome_g1o2f5kw" target="_blank" rel="noopener noreferrer" aria-label="Contra"><i class="fa-solid fa-c" aria-hidden="true"></i></a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+      <div class="contact-right">
         <form class="contact-form" id="contactForm" novalidate>
-          <div class="field">
+          <div class="form-group">
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" required autocomplete="name" />
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
           </div>
-          <div class="field">
+          <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" required autocomplete="email" />
+            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required />
           </div>
-          <div class="field">
+          <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Send message</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn-submit" id="submitBtn">Send message</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
         </form>
       </div>
-    </section>
-  </main>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <a href="#home" class="logo"><span class="logo-mark">P.</span>Ziome</a>
-      <nav aria-label="Footer">
-        <ul>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <ul class="social" aria-label="Social links">
-        <li><a href="https://www.linkedin.com/in/praise-ziome" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
-        <li><a href="https://github.com/Praise-Ziome" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
-        <li><a href="https://webflow.com/dashboard?workspace=praises-workspace-22e867" target="_blank" rel="noopener noreferrer" aria-label="Webflow"><i class="fa-brands fa-webflow" aria-hidden="true"></i></a></li>
-        <li><a href="https://contra.com/praise_ziome_g1o2f5kw/work" target="_blank" rel="noopener noreferrer" aria-label="Contra"><i class="fa-solid fa-c" aria-hidden="true"></i></a></li>
-        <li><a href="https://wa.me/263717678562" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
-      </ul>
-      <p class="copyright">© <span id="year"></span> Praise Ziome. Built with care.</p>
     </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">P. Ziome</span>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#work">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/praise-ziome"  target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/Praise-Ziome" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://x.com/pman_zw" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63z"/></svg>
+        </a>
+        <a href="https://wa.me/263717678562" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-link">
+           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.52 3.48A11.86 11.86 0 0 0 12.04 0C5.41 0 .04 5.37.04 12c0 2.12.55 4.19 1.61 6.02L0 24l6.17-1.62A11.95 11.95 0 0 0 12.04 24C18.67 24 24 18.63 24 12c0-3.2-1.25-6.2-3.48-8.52ZM12.04 21.8a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.66.96.98-3.56-.24-.37A9.77 9.77 0 1 1 12.04 21.8Zm5.39-7.34c-.29-.15-1.71-.84-1.98-.94-.27-.1-.47-.15-.67.15s-.77.94-.95 1.13c-.17.2-.35.22-.64.08-.29-.15-1.23-.45-2.34-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.14-.14.29-.35.44-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.08-.79.37-.27.29-1.04 1.01-1.04 2.46s1.06 2.85 1.21 3.05c.15.2 2.08 3.17 5.03 4.44.7.3 1.25.48 1.67.61.7.22 1.34.19 1.84.11.56-.08 1.71-.7 1.95-1.38.24-.68.24-1.27.17-1.39-.07-.12-.27-.2-.56-.35Z"/>
+        </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 Praise Ziome · Built with care</div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
