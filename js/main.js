@@ -1,116 +1,171 @@
-/* ============================================
-   Portfolio interactions
-   - Mobile nav toggle (with hamburger ↔ X animation)
-   - Sticky navbar shadow on scroll
-   - Active link close on navigation
-   - Footer year
-   - Contact form (client-side validation)
-   ============================================ */
-(function () {
-  'use strict';
+/* ═══════════════════════════════════════════
+   P. ZIOME PORTFOLIO — script.js
+═══════════════════════════════════════════ */
 
-  // Footer year
-  var yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+/* ── NAVBAR: scroll shadow + mobile menu ── */
+(function initNav() {
+  const navbar = document.getElementById('navbar');
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobLinks = document.querySelectorAll('.mob-link');
 
-  // Mobile nav
-  var toggle = document.getElementById('navToggle');
-  var menu = document.getElementById('navMenu');
-  var spans = toggle ? toggle.querySelectorAll('span') : [];
+  // Sticky style on scroll
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
 
-  function openMenu() {
-    menu.classList.add('is-open');
-    toggle.setAttribute('aria-expanded', 'true');
-    toggle.setAttribute('aria-label', 'Close menu');
-    // Animate to X
-    if (spans.length === 3) {
-      spans[0].style.transform = 'translateY(7px) rotate(45deg)';
-      spans[1].style.opacity = '0';
-      spans[1].style.transform = 'scaleX(0)';
-      spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+  // Burger toggle
+  burger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close mobile menu on link click
+  mobLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', false);
+    });
+  });
+})();
+
+/* ── SCROLL REVEAL ── */
+(function initReveal() {
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  els.forEach(el => observer.observe(el));
+})();
+
+/* ── IMAGE PLACEHOLDER HIDE ── */
+(function initImages() {
+  // When a real image loads successfully, hide its sibling placeholder
+  const imgs = document.querySelectorAll('img');
+  imgs.forEach(img => {
+    const placeholder = img.nextElementSibling;
+    if (!placeholder) return;
+
+    if (img.complete && img.naturalWidth > 0) {
+      placeholder.style.display = 'none';
+    } else {
+      img.addEventListener('load', () => {
+        if (img.naturalWidth > 0) placeholder.style.display = 'none';
+      });
     }
-  }
+  });
+})();
 
-  function closeMenu() {
-    menu.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Open menu');
-    // Animate back to hamburger
-    if (spans.length === 3) {
-      spans[0].style.transform = '';
-      spans[1].style.opacity = '';
-      spans[1].style.transform = '';
-      spans[2].style.transform = '';
+/* ── ACTIVE NAV LINK (scroll spy) ── */
+(function initScrollSpy() {
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  if (!navLinks.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+})();
+
+/* ── CONTACT FORM ── */
+(function initForm() {
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Basic validation
+    const name    = form.name.value.trim();
+    const email   = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+      setStatus('Please fill in all fields.', 'error');
+      return;
     }
-  }
+    if (!isValidEmail(email)) {
+      setStatus('Please enter a valid email address.', 'error');
+      return;
+    }
 
-  if (toggle && menu) {
-    toggle.addEventListener('click', function () {
-      var isOpen = menu.classList.contains('is-open');
-      if (isOpen) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
+    // Disable button during send
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    setStatus('', '');
 
-    // Close menu when a nav link is clicked
-    menu.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') {
-        closeMenu();
-      }
-    });
+    try {
+      /*
+       * TODO: Replace this with your actual form endpoint.
+       * Options: Formspree (formspree.io), Netlify Forms,
+       * EmailJS, or your own backend.
+       *
+       * Example with Formspree:
+       *   const res = await fetch('https://formspree.io/f/YOUR_ID', {
+       *     method: 'POST',
+       *     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+       *     body: JSON.stringify({ name, email, message })
+       *   });
+       *   if (!res.ok) throw new Error('Send failed');
+       */
 
-    // Close menu when clicking outside
-    document.addEventListener('click', function (e) {
-      if (menu.classList.contains('is-open') &&
-          !menu.contains(e.target) &&
-          !toggle.contains(e.target)) {
-        closeMenu();
-      }
-    });
+      // Simulate a send for now (remove this when connecting a real endpoint)
+      await new Promise(resolve => setTimeout(resolve, 1200));
 
-    // Close menu on Escape key
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && menu.classList.contains('is-open')) {
-        closeMenu();
-        toggle.focus();
-      }
-    });
-  }
-
-  // Navbar shadow on scroll
-  var navbar = document.getElementById('navbar');
-  var onScroll = function () {
-    if (!navbar) return;
-    if (window.scrollY > 8) navbar.classList.add('is-scrolled');
-    else navbar.classList.remove('is-scrolled');
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  // Contact form
-  var form = document.getElementById('contactForm');
-  var status = document.getElementById('formStatus');
-  if (form && status) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var name = form.name.value.trim();
-      var email = form.email.value.trim();
-      var message = form.message.value.trim();
-      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      if (!name || !emailOk || !message) {
-        status.style.color = '#b91c1c';
-        status.textContent = 'Please fill in every field with a valid email.';
-        return;
-      }
-      status.style.color = '';
-      status.textContent = 'Thanks ' + name + '! Your message has been queued.';
+      setStatus('Message sent! I\'ll be in touch soon.', 'success');
       form.reset();
-    });
+    } catch (err) {
+      setStatus('Something went wrong. Please try emailing me directly.', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+    }
+  });
+
+  function setStatus(msg, type) {
+    status.textContent = msg;
+    status.className = `form-status${type ? ' ' + type : ''}`;
+  }
+
+  function isValidEmail(val) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
   }
 })();
 
+/* ── SMOOTH SCROLL for anchor links ── */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    const navHeight = document.getElementById('navbar').offsetHeight;
+    const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
 /* ── THEME TOGGLE ── */
 (function initTheme() {
   const btn  = document.getElementById('themeToggle');
